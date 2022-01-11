@@ -146,7 +146,7 @@ def orthogonal(arr, shape=None):
     else:
         raise ValueError('Cannot ortho-initialize vectors. Please specify shape')
 
-    shape = (arr.size / d1 / d2, d1, d2)
+    shape = (int(arr.size / d1 / d2), d1, d2)
 
     if shape[0] == 1 and d1 == 1 or d2 == 1:
         raise ValueError('Cannot ortho-initialize vectors.')

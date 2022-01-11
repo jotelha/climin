@@ -88,7 +88,7 @@ class Xnes(Minimizer):
             # TODO: vectorize this
             cov_gradient = sum([u * (scipy.outer(s, s) - I)
                                 for (s, u) in zip(samples, utilities)])
-            update = scipy.linalg.expm2(A * cov_gradient * self.step_rate * 0.5)
+            update = scipy.linalg.expm(A * cov_gradient * self.step_rate * 0.5)
             A[:] = scipy.dot(A, update)
 
             yield dict(loss=-best_x, n_iter=i)
