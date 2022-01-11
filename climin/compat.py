@@ -5,7 +5,7 @@ if sys.version_info[0] == 2:
     # The following line looks weird, yes. However, if it is not added
     # ``basestring`` will not be part of the namespace of this module, and
     # henceforth not be importable.
-    basestring = basestring
+    str = str
 else:
     from builtins import range
-    basestring = str
+    str = str

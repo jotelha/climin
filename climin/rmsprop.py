@@ -2,7 +2,7 @@
 
 """This module provides an implementation of rmsprop."""
 
-from __future__ import absolute_import
+
 
 import numpy as np
 

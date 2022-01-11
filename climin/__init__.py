@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 
 # Control breaking does not work on Windows after e.g. scipy.stats is
 # imported because certain Fortran libraries register their own signal handler

@@ -32,7 +32,7 @@ where :math:`\\alpha_t` is obtained with a line search.
 
 """
 
-from __future__ import absolute_import
+
 
 import warnings
 

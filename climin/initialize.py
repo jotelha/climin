@@ -3,7 +3,7 @@
 """Module that contains functionality to initialize parameters to starting
 values."""
 
-from __future__ import absolute_import
+
 
 import random
 
@@ -54,7 +54,7 @@ def sparsify_columns(arr, n_non_zero, keep_diagonal=False, random_state=None):
     arr_np = arr if isinstance(arr, np.ndarray) else arr.as_numpy_array()
     mask = np.ones_like(arr_np)
     for i in range(arr.shape[1]):
-        idxs = range(colsize)
+        idxs = list(range(colsize))
         if random_state is None:
             zeros = random.sample(idxs, colsize - n_non_zero)
         else:

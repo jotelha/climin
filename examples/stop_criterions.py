@@ -38,9 +38,9 @@ wrt = scipy.random.standard_normal((dim,)) * 10 + 5
 opt = GradientDescent(wrt, quadraticprime, steprate=0.01)
 
 for info in opt:
-    print "iteration %3i loss=%g" % (info['n_iter'], quadratic(wrt))
+    print("iteration %3i loss=%g" % (info['n_iter'], quadratic(wrt)))
     if after_1000_iterations(info):
-        print "1000 iterations done."
+        print("1000 iterations done.")
         break
 
 # as you can see above, a stop criterion always takes the info 
@@ -55,7 +55,7 @@ for info in opt:
 wrt = scipy.random.standard_normal((dim,)) * 10 + 5
 opt = GradientDescent(wrt, quadraticprime, steprate=0.01)
 info = opt.minimize_until(after_1000_iterations)
-print "1000 iterations done."
+print("1000 iterations done.")
 
 # the optimizer's minimize_until() method takes either a single
 # stop criterion or a list of criterions and iterates until
@@ -106,9 +106,9 @@ opt = GradientDescent(wrt, quadraticprime, steprate=0.01)
 loss_converged = converged(lambda: quadratic(wrt))    
        
 for info in opt:
-    print "iteration %3i loss=%g" % (info['n_iter'], quadratic(wrt))
+    print("iteration %3i loss=%g" % (info['n_iter'], quadratic(wrt)))
     if loss_converged(info):
-        print "loss converged."
+        print("loss converged.")
         break
     
 

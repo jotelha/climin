@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import absolute_import
+
 
 import inspect
 import itertools
@@ -47,7 +47,7 @@ def clear_info(info):
     >>> cleared == {'bar': 1.0, 'loss': 1.0}
     True
     """
-    items = info.iteritems()
+    items = iter(info.items())
     items = ((k, float(v.reshape((1,))[0]) if is_array(v) and v.size == 1 else v)
              for k, v in items)
     items = ((k, v) for k, v in items if not is_array(v))
@@ -432,7 +432,7 @@ def iter_minibatches(lst, batch_size, dims, n_cycles=None, random_state=None,
     count = next(counter)
 
     while True:
-        indices = range(n_batches)
+        indices = list(range(n_batches))
         while True:
             if n_cycles is not None and count >= n_cycles:
                 raise StopIteration()

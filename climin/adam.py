@@ -2,7 +2,7 @@
 
 """This module provides an implementation of Adam."""
 
-from __future__ import absolute_import
+
 
 import warnings
 

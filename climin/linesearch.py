@@ -9,7 +9,7 @@ one-dimensional optimization problem, which can then be solved by a line search.
 
 # TODO: this module needs lots of pep8 love.
 
-from __future__ import absolute_import
+
 
 import itertools
 
